@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Pizza
+namespace pizza
 {
     class ChicagoPizzaStore : PizzaStore
     {
@@ -12,10 +10,14 @@ namespace Pizza
         {
             if (type == "cheese")
             {
-                return new NYStyleCheesePizza();
+                return new ChicagoStyleCheesePizza();
             }
-
+            else if (type == "veggie")
+            {
+                return new ChicagoStyleVeggiePizza();
+            }
             return null;
         }
+
     }
 }
